@@ -2,9 +2,38 @@ package Day04;
 
 public class Ex1_변수 { // class s
     public static void main(String[] args) { // main s
+        // 1. boolean
+        boolean value1 = true;      System.out.println("변수1 호출 : " + value1 );
+        // boolean value2 = 10;    // 에러 이유 : boolean 자료형은 true 혹은 false 만 저장가능
 
-        System.out.println( 3*3 ); // 9 결과 --> 출력 후 --> 사라짐
-        double 실수 = 20.7434;
+        // 2. char  문자[''] vs 문자열[""]
+        char value3 = 'A';          System.out.println("변수3 호출 : " + value3 );
+        //char value4 = "ABC";        // 에러 이류 : char 자료형은 '' 문자1개만 저장 가능하다.
+        // 2-1 String 클래스
+        String value5 = "ABC";      System.out.println("변수5 호출 : " + value5 );
+
+        // 3. byte
+        byte value6 = 100;          System.out.println("변수6 호출 : " + value6);
+        // byte value7 = 789;          // 에러 이유 : byte 자료형은 +-127 까지 저장 가능
+
+        // 4. short
+        short value8 = 30000;       System.out.println("변수8 호출 : "+value8);
+        // short value9 = 40000;       // 에러 이유 : short 자료형은 +-3만정도 저장 가능
+
+        // 5.*int : 자료형변수에 저장되기전 데이터의 기본자료형
+        int value10 = 2000000000;   System.out.println("변수10 호출 : " + value10 );
+        // int value11 = 1000000000000;    // 에러 이유 : int자료형은 +-20억정도 저장 가능
+
+        // 6. long  : 입력된정수(int)L
+        long value12 = 1000000000000L;      System.out.println("변수12 호출 : " + value12 );
+        long value13 = 999999999999999999L; System.out.println("변수13 호출 : " + value13 );
+        // 18자리 가능 하다  [ 그 이상 --> 문자열 처리 ]
+
+        // 7. float : [ 소수 7자리 ]
+        float value14 = 0.8888888888888888888F;         System.out.println("변수14 호출 : " + value14 );
+        // 8. *double : [소수 16자리 ] 자료형변수에 저장되기전 실수 데이터는 double
+        double value15 = 0.888888888888888888888888888; System.out.println("변수15 호출 : " + value15);
+
     } // main e
 } // class e
 
