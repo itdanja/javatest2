@@ -1,7 +1,42 @@
 package Day04;
 
-public class Q1_회원가입 { // class s
+import java.util.Scanner;
 
+public class Q1_회원가입 { // class s
+    public static void main(String[] args) { // main s
+
+        // 1. 입력객체 만들자 [ 1개 ]
+        Scanner scanner = new Scanner(System.in);
+        // 2.
+        System.out.println("------------------ 회원가입 창 ------------------");
+        System.out.print(" => 아이디[문자15자리내] : ");        String 아이디 = scanner.next();
+        // 3.
+        System.out.print(" => 비밀번호[숫자4자리] : ");         short 비밀번호 = scanner.nextShort();
+        // 4.
+        scanner.nextLine(); // 오류 방지
+        System.out.print(" => 자기소개[100글자내] : ");        String 자기소개 = scanner.nextLine();
+        //5.
+        System.out.print(" => 성별[남:true/여:false] : ");     boolean 성별 = scanner.nextBoolean();
+        // 6.
+        System.out.print(" => 선호 번호[ 100 이하 ] : ");     byte 번호 = scanner.nextByte();
+        // 7.
+        System.out.print(" => 투자 금액 [ 20억 이하 ] : ");    int 금액 = scanner.nextInt();
+        // 8.
+        System.out.print(" => 키 [ 소수점1자리 입력 ] ");       float 키 = scanner.nextFloat();
+        // 9.
+        System.out.print(" => 몸무게 [ 소수점2자리 입력 ] ");   double 몸무게 = scanner.nextDouble();
+
+        System.out.println("====================== 회원가입 정보 ========================");
+
+
+
+
+        System.out.println(" * * 회원가입 해주셔서 감사합니다.  * * ");
+        System.out.println("============================================================");
+
+
+
+    } // main e
 }  // class e
 /*
     - 회원가입 만들기
