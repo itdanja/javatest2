@@ -41,6 +41,36 @@ public class Q1_IF문제 { // class s
         }else {                      // 그외
             System.out.println("[불합격]"); // false
         }
+        /* ---------------------- 4 ------------------------------*/
+        System.out.println("a : "); int a = scanner.nextInt();
+        System.out.println("b : "); int b = scanner.nextInt();
+        if( a > b ) System.out.println( a +"가 큽니다.");
+        else if( a <b ) System.out.println(b+"가 큽니다.");
+        else System.out.println("같습니다.");
+
+        /* ---------------------- 5 ------------------------------*/
+        System.out.print("q : "); int q = scanner.nextInt();
+        System.out.print("w : "); int w = scanner.nextInt();
+        System.out.print("e : "); int e = scanner.nextInt();
+        int max = q;    // max 변수에 첫번째 정수를 넣는다.
+        if( max < w ) max = w; // 만약에 max 보다 두번째 수가 더 크면 max에 두번째 수를 대입
+        if( max < e ) max = e; // 만약에 max 보다 세번재 수가 더 크면 max에 세번째 수를 대입
+        System.out.println( max +"가 가장 큽니다. ");
+
+        /* ---------------------- 7 ------------------------------*/
+        // * 스왑[ swap ]
+            // 스왑 필요한 이유!!! :  두 변수의 값 바로 교체 불가능
+        System.out.print("z : "); int z = scanner.nextInt();
+        System.out.print("x : "); int x = scanner.nextInt();
+        System.out.print("c : "); int c = scanner.nextInt();
+
+        if( z > x ) { int temp = z; z=x; x=temp; }
+        if( z > c ) { int temp = z; z=c; c=temp; }
+        if( x > c ) { int temp = x; x=c; c=temp; }
+
+        System.out.printf( "%3d %3d %3d" , z , x , c );
+                        // %d : 정수 형식
+                        // % 숫자d : 숫자만큼 자릿수 가짐
 
     } // m s
 } // class e
