@@ -25,8 +25,22 @@ public class Q1_IF문제 { // class s
         int 문제2 = scanner.nextInt();
         if( 문제2 % 7 == 0 ) System.out.println("7배수입니다.");
         else System.out.println("7배수가 아닙니다.");
-
         /* ---------------------- 3 ------------------------------*/
+        System.out.print("국어 : "); int 국어 = scanner.nextInt();
+        System.out.print("영어 : "); int 영어 = scanner.nextInt();
+        System.out.print("수학 : "); int 수학 = scanner.nextInt();
+        int 평균 =( 국어+영어+수학 ) / 3;
+        if( 평균 >= 80 ){             // 조건1
+                                        // 조건1 true
+            if( 국어>=90 ) System.out.println("[합격] 국어 우수 ");
+            else if( 영어>=90 ) System.out.println("[합격] 영어 우수 ");
+            else if( 수학>=90 ) System.out.println("[합격] 수학 우수 ");
+
+        }else if( 평균 >= 70 ){       // 조건2
+            System.out.println("[합격]");// 조건2 true
+        }else {                      // 그외
+            System.out.println("[불합격]"); // false
+        }
 
     } // m s
 } // class e
