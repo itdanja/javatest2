@@ -31,6 +31,24 @@ public class Ex1_제어문 { // class s
              * 조건 : 비교연산자 or 논리연산자 or TURE/FALSE
              1. IF( 조건 ) 참실행문;
              2. IF( 조건 ) { 참실행문1; 참실행문2; }
+             3. IF( 조건 )  참실행문;
+                ELSE 거짓실행문;
+             4. IF( 조건 ) { 참실행문1; 참실행문2; }
+                ELSE{ 거짓실행문1; 거짓실행문; }
+             5. IF( 조건1 ) { 참실행문1; }
+                ELSE IF( 조건2 ) { 참실행문2; }
+                ELSE IF( 조건3 ) { 참실행문3; }
+                ELSE { 거짓실행문; }
+             6. if중첩
+
+                if( 조건1 ) {
+                    if( 조건 ) {  }
+                    else{ }
+                }else{
+                    if( 조건 ) {  }
+                    else{ }
+                }
+
              *
          */
         // 1. 조건 결과가 true 이면 다음 있는 코드[ ; ] 1개 실행
@@ -48,6 +66,62 @@ public class Ex1_제어문 { // class s
             System.out.println("3이5보다크다.");
             System.out.println("다음코드"); // IF 와 관련 있는 코드
         }
+
+        // 5.
+        if( 3 > 5 ) System.out.println("3이 5보다 크다. ");
+        else System.out.println(" 3이 5보다 작다. ");
+
+        // 6.
+        if( 3>5 ){ // if s
+            System.out.println("3이 5보다 크다1");
+            System.out.println("다음코드");
+        } // if e
+        else{ // else s
+            System.out.println("3이 5보다 작다1");
+            System.out.println("다음코드");
+        } // else e
+
+        // 7. 조건이 다수일때
+        // if ~ else if ~ else if ~ else if ~ else : 하나의 true/false 가진다.
+        // 구매금액에 따라 상품권 10만원 이상이면 만원 , 20만원이상 2만원 , 30만원이상 3만원
+        //          고객 20만원 --> 2만원
+        // * 다수 조건에 따른 결과가 하나일 경우
+        if( 3 > 7) System.out.println("3이 7보다 크다.");
+        else if( 3 > 5 ) System.out.println("3이 5보다 크다.");
+        else if( 3 > 3 ) System.out.println("3이 3보다 크다. ");
+        else if( 3 > 2 ) System.out.println("3이 2보다 크다. ");
+        else System.out.println("그외");
+
+        // vs
+        // if ~ if ~ if ~ if ~ else : 여러개의 true 가질수도 있다.
+        // 구매금액에 따라 상품권 10만원 이상이면 만원 추가로 20만원이상 2만원추가 30만원이상 3만원 =>
+        //          고객 20만원 => 3만원
+        //  * 다수 조건에 따른 결과가 여러개 일경우
+        if( 3 > 7) System.out.println("3이 7보다 크다.");
+        if( 3 > 5 ) System.out.println("3이 5보다 크다.");
+        if( 3 > 3 ) System.out.println("3이 3보다 크다. ");
+        if( 3 > 2 ) System.out.println("3이 2보다 크다. ");
+        else System.out.println("그외");
+
+        // 8.
+        if( 8 > 5 ){    // if 1 s
+            if( 8 > 7 ){
+                System.out.println("8은 5보다 크고 7보다 크다.");
+            } // if 2 s
+            else{
+                System.out.println("8은 5보다 크고 7보다 작다.");
+            } // else 2 s
+        } // if 1 e
+        else{ // else 1 s
+            if( 8 > 10 ){
+                System.out.println("8은 5보다 작고 10보다 크다.");
+            } // if 2 s
+            else{
+                System.out.println("8은 5보다 작고 10보다 작다.");
+            } // else 2 s
+        } // else 1 e
+
+
 
     } // main e
 } // class e
