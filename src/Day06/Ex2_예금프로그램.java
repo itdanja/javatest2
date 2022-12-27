@@ -28,7 +28,7 @@ public class Ex2_예금프로그램 { // c s
                 if( 입력계좌 == 계좌번호 ){ // if s // 입력한 계좌번호가 같으면
                     System.out.print(" >> 비밀번호 : ");
                     int 입력비번 = scanner.nextInt();
-                    if( 입력비번 == 계좌번호 ){ // if s
+                    if( 입력비번 == 비밀번호 ){ // if s
                         System.out.print(" >> 예금액 : ");
                         예금액 += scanner.nextInt(); // 입력받은 예금액을 기존 예금액과 더한후에 예금액에 대입
                         // vs 예금액 = 예금액 + scanner.nextInt()
