@@ -42,9 +42,28 @@ public class Ex2_예금프로그램 { // c s
                     System.out.println(" >> 안내 : 계좌번호가 일치 하지 않습니다.");
                 } // else e
             }  // if 1 end
-            else if( 메뉴 == 2 )  { System.out.println(" >>> 출금 >>> "); }  //4-1. 2를 입력했을때
-            else if( 메뉴 == 3 )  { System.out.println(" >>> 잔고 >>> "); }  //4-1. 3를 입력했을때
-            else if( 메뉴 == 4 )  { System.out.println(" >>> 종료 >>> "); }  //4-1. 4를 입력했을때
+            else if( 메뉴 == 2 )  {
+                System.out.println(" >>> 출금 >>> ");
+                System.out.print(" >>> 계좌번호 : ");       int 입력계좌 = scanner.nextInt();
+                if( 입력계좌 == 계좌번호){
+                    System.out.print(" >>> 비밀번호 : ");   int 입력비번 = scanner.nextInt();
+                    if( 입력비번 == 비밀번호 ){
+                        System.out.print(" >>> 출금액 : "); int 출금액 = scanner.nextInt();
+                        if( 예금액 < 출금액 ){ // 만약에 예금액 보다 출금액이 더 크면 출금 불가능
+                            System.out.println(" >> 안내 : 예금액이 부족합니다. ");
+                        }else{
+                            예금액 -= 출금액;
+                            System.out.println(" >> 안내 : 출금이 완료되었습니다. ");
+                        }
+                    }else{  System.out.println(" >> 안내 : 비밀번호가 다릅니다. ");  }
+                }else{   System.out.println(" >> 안내 : 계좌번호가 다릅니다. ");  }
+            }  //4-1. 2를 입력했을때
+            else if( 메뉴 == 3 )  {
+                System.out.println(" >>> 잔고 >>> ");
+                System.out.println(" >> 현재 예금액 : " + 예금액 );
+            }  //4-1. 3를 입력했을때                                  // break; 무한루프 종료
+            else if( 메뉴 == 4 )  { System.out.println(" >>> 종료 >>> "); break; }  //4-1. 4를 입력했을때
+
         } // while e
     } // m e
 } // c e
